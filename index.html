@@ -3,27 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mico Animation</title>
+    <title>Mico - Microsoft Copilot</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <div class="blob-wrapper" id="blobWrapper">
             <div class="blob" id="blob">
-                <div class="face">
+                <div class="face smile" id="face">
                     <div class="eyes-row">
                         <div class="eye left-eye">
-                            <div class="pupil"></div>
+                            <div class="catchlight"></div>
                         </div>
                         <div class="eye right-eye">
-                            <div class="pupil"></div>
+                            <div class="catchlight"></div>
                         </div>
                     </div>
-                    <div class="mouth"></div>
+                    <div class="mouth smile" id="mouth"></div>
+                </div>
+                <!-- Thinking hand - appears only in thinking mode -->
+                <div class="thinking-hand" id="thinkingHand">
+                    <div class="hand-palm"></div>
+                    <div class="hand-finger"></div>
                 </div>
             </div>
         </div>
         <div class="particles" id="particles"></div>
+        <div class="mode-tabs">
+            <button class="mode-tab active" data-mode="smile" id="tabSmile">
+                <span>😊</span>
+                <span>Smile</span>
+            </button>
+            <button class="mode-tab" data-mode="thinking" id="tabThinking">
+                <span>🤔</span>
+                <span>Thinking</span>
+            </button>
+            <button class="mode-tab" data-mode="talking" id="tabTalking">
+                <span>💬</span>
+                <span>Talking</span>
+            </button>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
